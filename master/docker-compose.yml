@@ -1,0 +1,22 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    volumes:
+      - ./data:/var/lib/mysql
+  web:
+    build: .
+    command: npm start
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=123456
+    volumes:
+      - ./script:/script
+    ports:
+      - "6789:6789"
+    links:
+      - db

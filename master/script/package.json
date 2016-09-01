@@ -1,0 +1,23 @@
+{
+  "name": "jmeter-slave-collector",
+  "version": "1.0.0",
+  "description": "Interface for jmeter slave to send IP address",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cdwanghai1@jd.com",
+  "license": "ISC",
+  "dependencies": {
+    "envs": "^0.1.6",
+    "express": "^4.14.0",
+    "finalhandler": "^0.5.0",
+    "mysql": "^2.11.1",
+    "router": "^1.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-config-google": "^0.6.0"
+  }
+}
